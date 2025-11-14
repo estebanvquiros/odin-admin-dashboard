@@ -4,12 +4,16 @@
   --bgColor-default: #ffffff;
   --bgColor-neutral-muted: #dee2e6;
 
+  --button-outline-bgColor-hover: #4dabf7;
+  --button-primary-bgColor-hover: #237032;
+
   --fgColor-white: #ffffff;
 
   --button-primary-bgColor-active: #2f9e44;
   --button-outline-fgColor-active: #ffffff;
 
   --data-orange-color-emphasis: #fab005;
+  --bgColor-neutral-emphasis: #868e96;
 }
 
 body {
@@ -53,13 +57,14 @@ body {
 
 .nav {
   display: grid;
-  gap: 20px;
 }
 
 .nav-item {
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
+  cursor: pointer;
+  height: 3.5rem;
 }
 
 .nav-item > svg {
@@ -157,6 +162,7 @@ body {
   border: 0px;
   border-radius: 20px;
   color: var(--button-outline-fgColor-active);
+  cursor: pointer;
   font-weight: 500;
   font-size: 1rem;
   padding: 8px 30px;
@@ -279,4 +285,19 @@ body {
 
 .project-card-content svg {
   width: 1.52rem;
+  cursor: pointer;
+}
+
+/* Hover */
+
+.nav-item:hover {
+  background-color: var(--button-outline-bgColor-hover);
+}
+
+.controls > button:hover {
+  background-color: var(--button-primary-bgColor-hover);
+}
+
+.project-card-content svg:hover {
+  fill: var(--bgColor-neutral-emphasis);
 }
